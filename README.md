@@ -25,4 +25,14 @@ Runs locally via **XAMPP** or any PHP server.
 ## ⚡ How to Run
 1. Copy project to XAMPP:  
 ```bash
-git clone https://github.com/JOBHEARs/qr-code-generator.git
+git clone https://github.com/JOBHEARs/qr-code-generator.gitgit clone https://github.com/JOBHEARs/qr-code-generator.git
+
+# Place the files in:
+C:\xampp\htdocs\qr-code-generator
+
+# Start Apache via XAMPP
+
+# Open browser at:
+http://localhost/qr-code-generator
+```
+
