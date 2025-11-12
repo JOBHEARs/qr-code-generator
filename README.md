@@ -1,101 +1,48 @@
-# QR Code Generator (PHP + SQL)
+# 📱 QR Code Generator
 
-แอปพลิเคชันเว็บง่าย ๆ สำหรับสร้าง QR Code จากข้อความ โดยใช้ **PHP** และ **MySQL**  
-โปรเจกต์นี้รัน **บนเครื่อง (localhost)** ผ่าน XAMPP หรือ PHP server ใดก็ได้
-
----
-
-## 🛠 คุณสมบัติ
-
-- สร้าง QR Code จากข้อความได้ทันที  
-- ปรับ **สี** และ **ขนาด** ของ QR Code ได้  
-- แสดงตัวอย่าง QR Code แบบเรียลไทม์  
-- เก็บข้อมูลใน **ฐานข้อมูล SQL** (ถ้าต้องการ)  
-- น้ำหนักเบา และรันบนเครื่องได้ง่าย
+A simple web app to generate QR Codes from text, built with **PHP + MySQL**.  
+Runs locally via **XAMPP** or any PHP server.
 
 ---
 
-## 💻 เทคโนโลยีที่ใช้
+## 🚀 Features
 
-- **PHP** – เขียนฝั่ง server  
-- **MySQL** – ฐานข้อมูล  
-- **HTML / CSS / JavaScript** – ฝั่งหน้าเว็บ  
-- **XAMPP** – สภาพแวดล้อมการพัฒนา local
+- Generate QR Codes instantly  
+- Customize **color** and **size**  
+- Live preview  
+- Optional SQL database storage  
+- Lightweight and easy to run
 
 ---
 
-## 🚀 เริ่มต้นใช้งาน
+## 🛠 Tech Stack
 
-### สิ่งที่ต้องมี
+- **Backend:** PHP  
+- **Database:** MySQL  
+- **Frontend:** HTML / CSS / JavaScript  
+- **Local Server:** XAMPP
 
-- ติดตั้ง XAMPP (Apache + MySQL)  
-- เว็บเบราว์เซอร์ (Chrome, Firefox, Edge ฯลฯ)
+---
 
-### ติดตั้งโปรเจกต์
+## ⚡ How to Run
 
-ตัวอย่างปรับให้อ่านง่าย:
-1. คัดลอกโปรเจกต์ไปยัง XAMPP
-
-ใช้ Git clone:
-
+1. Copy project to XAMPP:  
+```bash
 git clone https://github.com/JOBHEARs/qr-code-generator.git
+Or place in: C:\xampp\htdocs\qr-code-generator
 
+Start Apache & MySQL via XAMPP
 
-หรือคัดลอกไฟล์ไปที่:
+Create database:
 
-C:\xampp\htdocs\qr-code-generator
-
-2. เปิด XAMPP
-
-เปิด Apache และ MySQL ผ่าน XAMPP Control Panel
-
-3. สร้างฐานข้อมูล
-
-ใน phpMyAdmin หรือ MySQL CLI:
-
+sql
+Copy code
 CREATE DATABASE qr_generator;
-
-
-ถ้ามีไฟล์ SQL ให้ import:
-
 USE qr_generator;
 SOURCE path/to/db.sql;
+Configure includes/db.php with your DB credentials
 
-4. ตั้งค่าเชื่อมต่อฐานข้อมูล
+Open browser: http://localhost/qr-code-generator
 
-แก้ไฟล์ includes/db.php:
-
-<?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "qr_generator";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-?>
-
-5. เปิดเว็บเบราว์เซอร์
-
-เข้า URL:
-
-http://localhost/qr-code-generator
-
-6. วิธีใช้งาน
-
-ใส่ข้อความในช่อง input
-
-เลือก สี และ ขนาด ของ QR Code
-
-กด Generate
-
-ดูตัวอย่าง QR Code และดาวน์โหลดตามต้องการ
-
-7. ตัวอย่างหน้าเว็บ
-
-สามารถใส่รูป QR Code ตัวอย่างได้:
-
-![ตัวอย่าง QR Code](https://via.placeholder.com/200x200.png?text=QR+Code+Preview)
+👨‍💻 Author
+Developed by JOBHEARs
