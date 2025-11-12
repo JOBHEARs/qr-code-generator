@@ -35,4 +35,6 @@ C:\xampp\htdocs\qr-code-generator
 # Open browser at:
 http://localhost/qr-code-generator
 ```
+## 👨‍💻 Author
+Developed by [JOBHEARs](https://github.com/JOBHEARs)
 
